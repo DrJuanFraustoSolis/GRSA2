@@ -19,6 +19,51 @@ USA.
 
 README
 
+# GRSA-TBM
+
+The GRSA-TBM is a methodology that works with a family Golden Ratio Simulated Annealing (GRSA) algorithms and template based modeling (TBM). The family of GRSA are:
+GRSA0 = Simulated Annealing 
+GRSA1 = Golden Ratio Simulated Annealing
+GRSAE = Golden Ratio Simulated Annealing Evolutionary
+GRSA2 = Golden RAtio Simulated Annealing with CRO
+
+The Templates in TBM are built with:
+Secondary structure prediction by PSIPRED and PSI-BLAST 
+Torsion angles prediction by SPINE-X
+********************++++
+The Psipred can be download in: http://bioinfadmin.cs.ucl.ac.uk/downloads/psipred/
+The SPINE-X can be download in: https://sparks-lab.org/downloads/
+The template are saved in a file (*.var);
+************************************
+1. Installation.
+
+To install the GRSA algorithms you need fortran 90 and an operating system with linux.
+GRSA algorithms come per folder for each one which contains the SMMP package, inside the each folder there is a makefile needed you compile the SMMP.
+
+In the linux terminal you enter the file path, for example cd home/user/GRSA-master. Then in the terminal type make clean, this instruction cleans the object files. Next in terminal type make, this create the new object files.
+
+For each GRSA algorithm you need to do the make clean and make, in order to install the program.
+
+2. Configuration.
+
+The EXAMPLES folder contains the a sequence file (1in3.seq) and template file (1in3.var) for each algorithm, this files are necessary to run the program with the instance 1in3. The instance parameters are in sa.f, grsa.f, grsae.f, and grsa2.f for each algorithm.
+
+3. Run algorithm.
+
+For run the algorithm program you need type ./smmp in the linux terminal.
+example: ~/GRSA-master$ ./smmp  
+
+The program will start to run and show the energy with its respective temperature until the execution is finished.
+
+4. Output files
+
+Threedimensional structure: performs the prediction of the three-dimensional structure in a *.pdb format
+
+The Energy of the structure: contains the energy of prediction of the three-dimensional structure in *.txt format
+
+5. Troubleshooting
+For any problem you can contact juan.paulosh@gmail.com
+
 The GRSA2 package is This software is the Golden Ratio Simulated Annealing 2 (GRSA2).
 It is based on the SMMP package. The GRSA2 software is based on the Golden Ratio simulated
 annealing and chemical reaction optimization algorithms described in the next papers:
